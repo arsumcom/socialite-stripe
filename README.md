@@ -32,7 +32,7 @@ After installing the SocialiteStripe library, register the `ArsumCom\SocialiteSt
 ],
 ```
 
-You will also need to add credentials for the OAuth services your application utilizes. These credentials should be placed in your `config/services.php` configuration file, and should use the key `facebook`, `twitter`, `linkedin`, `google`, `github` or `bitbucket`, depending on the providers your application requires. For example:
+You will also need to add credentials for the OAuth services your application utilizes. These credentials should be placed in your `config/services.php` configuration file, and should use the key `stripe`. For example:
 ```php
 'stripe' => [
     'client_id' => env('STRIPE_CLIENT_ID', 'your-stripe-app-id'),
