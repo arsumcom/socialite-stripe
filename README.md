@@ -20,26 +20,29 @@ Via Composer
 $ composer require arsumcom/socialite-stripe
 ```
 
-## Usage
+## Configuration
 
-``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+After installing the SocialiteStripe library, register the `ArsumCom\SocialiteStripe\SocialiteStripeServiceProvider` in your `config/app.php` configuration file:
+
+```php
+'providers' => [
+    // Other service providers...
+
+    ArsumCom\SocialiteStripe\SocialiteStripeServiceProvider::class,
+],
 ```
 
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
+You will also need to add credentials for the OAuth services your application utilizes. These credentials should be placed in your `config/services.php` configuration file, and should use the key `facebook`, `twitter`, `linkedin`, `google`, `github` or `bitbucket`, depending on the providers your application requires. For example:
+```php
+'stripe' => [
+    'client_id' => env('STRIPE_CLIENT_ID', 'your-stripe-app-id'),
+    'client_secret' => env('STRIPE_CLIENT_SECRET', 'your-stripe-app-secret'),
+    'redirect' => env('STRIPE_REDIRECT', 'http://your-callback-url'),
+],
 ```
+## Basic Usage
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
+https://github.com/laravel/socialite#basic-usage
 
 ## Security
 
