@@ -1,4 +1,4 @@
-# socialite-stripe
+# Stripe singup and login implementation for https://github.com/laravel/socialite
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -46,7 +46,7 @@ If you discover any security related issues, please email max.fetisov@arsum.com 
 ## Credits
 
 - [Max Fetisov][link-author]
-- [All Contributors][link-contributors]
+- [Arsum][http://arsum.com]
 
 ## License
 
